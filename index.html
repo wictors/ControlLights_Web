@@ -28,14 +28,6 @@
     <div class="center-box">
       <div class="align-items-center">
         <ul class="configurations">
-          <script>
-            var list = $('ul.configurations');
-            jQuery.getJSON("http://localhost:8080/getConfigs", function(data, status){
-              $.each(data, function (i){
-                $('<li/>').addClass('configuration').text(data[i]).appendTo(list);
-              });
-            });
-          </script>
         </ul>
       </div>
 
