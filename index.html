@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -14,28 +14,33 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src=js/jquery-3.5.1.js></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src=js/scripts.js></script>
 </head>
+
 <body>
-<div class="d-flex justify-content-center align-items-center h-100">
-  <div class="text-center">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div
+        class="col-12 d-flex flex-column justify-items-center align-items-center justify-content-center content-container">
 
-    <h1 class="title-openLab">OpenLab - Lights</h1>
-    <h4 class="subtitle">Choose your configuration and play IT !</h4>
+        <h1 class="title-openLab mb-4">OpenLab - Lights</h1>
+        <h4 class="subtitle mb-5">Choose your configuration and play IT !</h4>
 
-    <div class="center-box">
-      <div class="align-items-center">
-        <ul class="configurations">
+        <ul class="configurations-container configurations">
+
         </ul>
-      </div>
 
-      <div class="play-btn-container">
-        <button class="play-btn">Play</button>
+        <div class="mt-5">
+          <button class="play-btn">Play</button>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 </body>
+
 </html>

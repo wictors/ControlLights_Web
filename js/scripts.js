@@ -1,12 +1,14 @@
-$(document).ready(function () {
-        var list = $('ul.configurations');
-        jQuery.getJSON("http://localhost:8080/getConfigs", function(data, status){
+$(document).ready(() => {
+    var list = $('ul.configurations');
+    jQuery.getJSON("http://localhost:8080/getConfigs", (data, status) => {
         $.each(data, function (i){
             $('<li/>').addClass('configuration').text(data[i]).appendTo(list);
         });
+    }).fail(() => {
+        $('<li/>').addClass('fallback-text').text('No data').appendTo(list);
     });
 
-    $(".configurations").on("click", "li", function() {
+    $(".configurations").on("click", "li", () => {
         $('.configuration').removeClass('selected-configuration');
         $('.configuration').removeClass('success-configuration');
         $('.configuration').removeClass('wrong-configuration');
@@ -16,7 +18,7 @@ $(document).ready(function () {
     $(".play-btn").click(function (){
         if ($('.selected-configuration').length > 0){
             var name = {name: $(".selected-configuration").text()}
-            jQuery.post("http://localhost:8080/play", name, function(data, status){
+            jQuery.post("http://localhost:8080/play", name, (data, status) => {
                 if("true".includes(data)){
                     $('.selected-configuration').addClass('success-configuration');
                     $('.configuration').removeClass('selected-configuration');
@@ -26,7 +28,7 @@ $(document).ready(function () {
                 }
 
             });
-        }else {
+        } else {
             alert("You choose any configuration !")
         }
     });
