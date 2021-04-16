@@ -8,11 +8,11 @@ $(document).ready(() => {
         $('<li/>').addClass('fallback-text').text('No data').appendTo(list);
     });
 
-    $(".configurations").on("click", "li", () => {
+    $("ul.configurations").on("click", "li", (event) => {
         $('.configuration').removeClass('selected-configuration');
         $('.configuration').removeClass('success-configuration');
         $('.configuration').removeClass('wrong-configuration');
-        $(this).addClass('selected-configuration');
+        $(event.currentTarget).addClass('selected-configuration');
     });
 
     $(".play-btn").click(function (){
