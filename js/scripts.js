@@ -17,6 +17,8 @@ $(document).ready(() => {
 
     $(".play-btn").click(function (){
         if ($('.selected-configuration').length > 0){
+            $("#btn i").removeAttr('class');
+            $("#btn i").addClass('fa fa-spinner fa-spin');
             var name = {name: $(".selected-configuration").text()}
             jQuery.post("http://localhost:8080/play", name, (data, status) => {
                 if("true".includes(data)){
@@ -26,6 +28,8 @@ $(document).ready(() => {
                     $('.selected-configuration').addClass('wrong-configuration');
                     $('.configuration').removeClass('selected-configuration');
                 }
+                $("#btn i").removeAttr('class');
+                $("#btn i").addClass('fa fa-play');
 
             });
         } else {

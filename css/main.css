@@ -14,34 +14,15 @@ body {
 }
 
 .title-openLab {
-  font-size: 70px;
+  font-size: 60px;
   color: #ffc107;
 }
 
 .subtitle {
-  font-size: 35px;
+  font-size: 25px;
   color: white;
 }
 
-@media only screen and (max-width: 767px) {
-  .title-openLab {
-    font-size: 50px;
-  }
-
-  .subtitle {
-    font-size: 22px;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .title-openLab {
-    font-size: 35px;
-  }
-
-  .subtitle {
-    font-size: 15px;
-  }
-}
 
 .center-box {
   justify-content: center;
@@ -106,28 +87,29 @@ body {
 }
 
 .play-btn {
-  background-color: transparent;
+  background-color: #ffc107;
   border: 3px solid #ffc107;
   border-radius: 0.5rem;
-  color: white;
+  color: black;
   padding: 5px 35px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 40px;
+  font-size: 35px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .play-btn:hover {
-  background-color: #ffc107;
-  color: black;
+  background-color: transparent;
+  color: white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
 }
 
 .play-btn:active {
   transition-duration: 0.1s;
   background-color: white;
+  color: black;
   transform: translateY(4px);
 }
 
@@ -137,4 +119,48 @@ body {
   text-align: center;
   color: white;
   font-size: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .title-openLab {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .play-btn{
+    font-size: 25px;
+  }
+
+  .configuration{
+    font-size: 20px;
+  }
+
+  .fallback-text{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .title-openLab {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .play-btn{
+    font-size: 17px;
+  }
+
+  .configuration{
+    font-size: 20px;
+  }
+
+  .fallback-text{
+    font-size: 20px;
+  }
 }
